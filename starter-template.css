@@ -1,0 +1,11 @@
+body {
+    padding-top: 5rem;
+}
+
+.tour-active-element {
+    background: white;
+}
+
+.lead {
+    text-align: center;
+}

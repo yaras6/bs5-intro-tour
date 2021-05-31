@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jarosław Honkisz">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Bootstrap 5 Intro Tour - extension</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/tour.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BS5 Intro Tour</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <div class="starter-template text-center py-5 px-3">
+            <h1 id="step1Container">Bootstrap 5 Into Tour free extension</h1>
+            <p id="step2Container">Plain JS extension for Bootstrap 5, which allows to create into/tours easly.</p>
+            <div>
+                <button id="btnLiveDemo" class="btn btn-primary">Live demo</button>
+            </div>
+        </div>
+        <p class=text-center>
+            Bootsrap 5 Intro Tour is a extension for bootstrap 5. Moreover this plugin is very lightweight, because it written in plain JS, and don't have jquery dependencies.
+        </p>
+
+        <p class="lead">If you find any bug or have ideas how can I improve this plugin, please create issue on github.</p>
+        <p class="lead">The extension is free, but any financial support is appreciated.</p>
+
+
+
+
+    </main>
+    <!-- /.container -->
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/tour.js"></script>
+
+    <script>
+        var steps = [{
+            title: "Hello",
+            content: "<p>Here is simple demo for Bootstrap 5 Infro Tour extension.</p>"
+        }, {
+            id: "step1Container",
+            content: "<p>I'll hope this plug in will be helpful for you.</p>"
+        }, {
+            id: "step2Container",
+            content: "<p>In case of any questions or ideas please create a issue on github.</p>"
+        }];
+        var tour = new Tour(steps, {
+            // Uncomment to change button translations
+            // translations: {
+            //     next: "Dalej",
+            //     previous: "Wróć",
+            //     finish: "Zakończ"
+            // }
+        });
+
+
+        document.getElementById("btnLiveDemo").addEventListener("click", function() {
+            tour.show();
+        });
+    </script>
+
+</body>
+
+</html>

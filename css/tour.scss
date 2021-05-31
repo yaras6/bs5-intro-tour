@@ -1,0 +1,81 @@
+﻿.tour-active-element {
+    position: relative;
+    border: 3px solid black;
+    border-radius: 5px;
+    z-index: 1050;
+}
+
+body.tour-active-element {
+    border: none;
+}
+
+.popover-tour {
+    .hidden {
+        display: none;
+    }
+    padding: 5px 10px;
+    min-width: 300px;
+    width: 500px;
+    max-width: 100%;
+    font-size: 14px;
+    z-index: 1051;
+    text-align: justify;
+    .tour-exit {
+        &:before {
+            font-family: "Arial";
+            content: "X";
+            position: absolute;
+            cursor: pointer;
+            font-size: 10px;
+            top: 6px;
+            right: 10px;
+            padding: 3px;
+        }
+    }
+    .popover-header {
+        background: none;
+        padding: 5px 0;
+        margin: 0;
+    }
+    .popover-body {
+        padding: 20px 0 10px;
+        .tour-tabs {
+            >div {
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+        }
+        .tour-tab-links {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            li {
+                display: inline-block;
+                a {
+                    padding: 4px;
+                    margin: 0 2px;
+                    background: #ced4da;
+                    font-size: 1px;
+                    border-radius: 4px;
+                    &.active {
+                        padding: 4px 10px;
+                        background: #adb5bd;
+                    }
+                }
+            }
+        }
+    }
+    .popover-footer {
+        background: none;
+        .btn {
+            border: 1px solid gray;
+            font-size: 10px;
+        }
+        .tour-finish,
+        .tour-next {
+            float: right;
+        }
+    }
+}

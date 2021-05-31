@@ -1,0 +1,91 @@
+.tour-active-element {
+  position: relative;
+  border: 3px solid black;
+  border-radius: 5px;
+  z-index: 1050;
+}
+
+body.tour-active-element {
+  border: none;
+}
+
+.popover-tour {
+  padding: 5px 10px;
+  min-width: 300px;
+  width: 500px;
+  max-width: 100%;
+  font-size: 14px;
+  z-index: 1051;
+  text-align: justify;
+}
+
+.popover-tour .hidden {
+  display: none;
+}
+
+.popover-tour .tour-exit:before {
+  font-family: "Arial";
+  content: "X";
+  position: absolute;
+  cursor: pointer;
+  font-size: 10px;
+  top: 6px;
+  right: 10px;
+  padding: 3px;
+}
+
+.popover-tour .popover-header {
+  background: none;
+  padding: 5px 0;
+  margin: 0;
+}
+
+.popover-tour .popover-body {
+  padding: 20px 0 10px;
+}
+
+.popover-tour .popover-body .tour-tabs > div {
+  display: none;
+}
+
+.popover-tour .popover-body .tour-tabs > div.active {
+  display: block;
+}
+
+.popover-tour .popover-body .tour-tab-links {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+
+.popover-tour .popover-body .tour-tab-links li {
+  display: inline-block;
+}
+
+.popover-tour .popover-body .tour-tab-links li a {
+  padding: 4px;
+  margin: 0 2px;
+  background: #ced4da;
+  font-size: 1px;
+  border-radius: 4px;
+}
+
+.popover-tour .popover-body .tour-tab-links li a.active {
+  padding: 4px 10px;
+  background: #adb5bd;
+}
+
+.popover-tour .popover-footer {
+  background: none;
+}
+
+.popover-tour .popover-footer .btn {
+  border: 1px solid gray;
+  font-size: 10px;
+}
+
+.popover-tour .popover-footer .tour-finish,
+.popover-tour .popover-footer .tour-next {
+  float: right;
+}
+/*# sourceMappingURL=tour.css.map */
