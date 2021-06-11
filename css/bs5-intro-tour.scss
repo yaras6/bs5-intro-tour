@@ -1,5 +1,6 @@
 ﻿.tour-active-element {
     position: relative;
+    background: white;
     border: 3px solid black;
     border-radius: 5px;
     z-index: 1050;
@@ -10,6 +11,11 @@ body.tour-active-element {
 }
 
 .popover-tour {
+    &.popover-tour-center {
+        inset: 50% auto auto 50% !important;
+        position: fixed !important;
+        transform: translate(-50%, -50%) !important;
+    }
     .hidden {
         display: none;
     }

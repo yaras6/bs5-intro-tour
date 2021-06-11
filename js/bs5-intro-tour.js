@@ -21,9 +21,10 @@
     };
 
     var getPopoverSettings = function(arrows) {
-        var template = '<div id="tour" class="popover popover-tour" role="tooltip">';
-        if (arrows) {
-            template += '<div class="popover-arrow"></div>';
+        var template = '<div id="tour" class="popover popover-tour" role="tooltip">' +
+            '<div class="popover-arrow"></div>';
+        if (!arrows) {
+            template = '<div id="tour" class="popover popover-tour popover-tour-center" role="tooltip">';
         }
 
         template += '<div class="tour-exit"></div>' +
@@ -41,7 +42,7 @@
             translations.finish +
             '   </a>' +
             '</div>' +
-            '</div>'
+            '</div>';
 
         return {
             placement: "auto",
@@ -60,17 +61,17 @@
 }
 
 Tour.prototype.getCurrentStepContent = function() {
-    return steps[this.currentTab].content;
+    return this.steps[this.currentTab].content;
 }
 
 Tour.prototype.getCurrentStepTitle = function() {
-    return steps[this.currentTab].title || "";
+    return this.steps[this.currentTab].title || "";
 }
 
 Tour.prototype.createTabLinks = function() {
     var html = '<ul class="tour-tab-links">';
 
-    for (var i = 0; i < steps.length; i++) {
+    for (var i = 0; i < this.steps.length; i++) {
         var cssClass = i === 0 ? "active" : "";
         html += '<li><a role="button" class="' + cssClass + '" data-tour-step="' + i + '">&nbsp;</a></li>';
     }
@@ -108,8 +109,8 @@ Tour.prototype.removeBackdrop = function() {
 
 Tour.prototype.getContainerByIndex = function(index) {
     var tourPopover = document.getElementsByTagName("body")[0];
-    if (steps[index].id) {
-        tourPopover = document.getElementById(steps[index].id)
+    if (this.steps[index].id) {
+        tourPopover = document.getElementById(this.steps[index].id);
     }
     return tourPopover;
 }

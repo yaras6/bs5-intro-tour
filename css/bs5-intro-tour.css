@@ -1,5 +1,6 @@
 .tour-active-element {
   position: relative;
+  background: white;
   border: 3px solid black;
   border-radius: 5px;
   z-index: 1050;
@@ -17,6 +18,13 @@ body.tour-active-element {
   font-size: 14px;
   z-index: 1051;
   text-align: justify;
+}
+
+.popover-tour.popover-tour-center {
+  inset: 50% auto auto 50% !important;
+  position: fixed !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
 }
 
 .popover-tour .hidden {
@@ -88,4 +96,4 @@ body.tour-active-element {
 .popover-tour .popover-footer .tour-next {
   float: right;
 }
-/*# sourceMappingURL=tour.css.map */
+/*# sourceMappingURL=bs5-intro-tour.css.map */
