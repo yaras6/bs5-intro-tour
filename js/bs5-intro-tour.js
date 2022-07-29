@@ -128,7 +128,6 @@ Tour.prototype.show = function() {
     this.addBackdrop();
 
     var opt = {};
-
     opt = this.extend(this.getDefaultPopoverSettings(), this.options.popover || {});
 
     opt.title = this.getCurrentStepTitle();
@@ -186,9 +185,9 @@ Tour.prototype.updateActiveElement = function() {
 
     for (var i = 0; i < this.steps.length; i++) {
         var e = this.getContainerByIndex(i);;
-
         if (i === this.currentTab) {
             e.classList.add("tour-active-element");
+            e.scrollIntoView();
         } else {
             e.classList.remove("tour-active-element");
         }

@@ -22,7 +22,7 @@
             -moz-user-select: none;
             user-select: none;
         }
-        
+
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -40,7 +40,9 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">BS5 Intro Tour</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -63,14 +65,46 @@
             </div>
         </div>
         <p class=text-center>
-            Bootsrap 5 Intro Tour is a extension for bootstrap 5. Moreover this plugin is very lightweight, because it written in plain JS, and don't have jquery dependencies.
+            Bootsrap 5 Intro Tour is a extension for bootstrap 5. Moreover this plugin is very lightweight, because it
+            written in plain JS, and don't have jquery dependencies.
         </p>
 
-        <p class="lead">If you find any bug or have ideas how can I improve this plugin, please create issue on github.</p>
+        <p class="lead">If you find any bug or have ideas how can I improve this plugin, please create issue on github.
+        </p>
         <p class="lead">The extension is free, but any financial support is appreciated.</p>
 
 
 
+        <p class="lead">
+            Ipsum elit ipsum diam ipsum consectetuer diam lorem laoreet consectetuer sit ut tincidunt nonummy diam
+            dolore ipsum sit dolore sit ut sit consectetuer laoreet.
+        </p>
+        <p class="lead">
+
+            Dolor sit magna dolor magna laoreet sit tincidunt sit ut aliquam nibh erat erat amet laoreet adipiscing erat
+            dolore dolor amet nibh amet erat.
+        </p>
+        <p class="lead">
+
+            Laoreet elit nibh tincidunt dolore consectetuer amet magna ipsum adipiscing adipiscing aliquam sed
+            adipiscing sit erat ipsum nonummy nonummy aliquam nibh aliquam dolore ipsum.
+        </p>
+        <p class="lead">
+
+            Erat lorem magna laoreet elit sit nonummy nonummy aliquam magna adipiscing nonummy amet diam dolore aliquam
+            nonummy ipsum diam tincidunt euismod consectetuer elit erat.
+        </p>
+        <p class="lead">
+
+            Laoreet dolore lorem ut ipsum consectetuer elit magna nonummy diam ut dolore sed sed nonummy aliquam laoreet
+            dolore erat nonummy erat tincidunt laoreet nibh.
+        </p>
+
+        <p id="step3Container" class="lead">
+
+            Laoreet dolore lorem ut ipsum consectetuer elit magna nonummy diam ut dolore sed sed nonummy aliquam laoreet
+            dolore erat nonummy erat tincidunt laoreet nibh.
+        </p>
 
     </main>
     <!-- /.container -->
@@ -80,27 +114,55 @@
     <script src="/js/bs5-intro-tour.js"></script>
 
     <script>
-        var steps = [{
+        var steps = [
+            {
             title: "Hello",
             content: "<p>Here is simple demo for Bootstrap 5 Infro Tour extension.</p>"
-        }, {
-            id: "step1Container",
-            content: "<p>I'll hope this plug in will be helpful for you.</p>"
-        }, {
-            id: "step2Container",
-            content: "<p>In case of any questions or ideas please create a issue on github.</p>"
-        }];
+            }, 
+            {
+                id: "step1Container",
+                content: "<p>I'll hope this plug in will be helpful for you.</p>"
+            }, 
+            {
+                id: "step2Container",
+                content: "<p>In case of any questions or ideas please create a issue on github.</p>"
+            },
+            {
+                id: "step3Container",
+                content: "<p>Auto scroll support</p>"
+            }];
         var tour = new Tour(steps, {
             // Uncomment to change button translations
             // translations: {
             //     next: "Dalej",
             //     previous: "Wróć",
             //     finish: "Zakończ"
+            // },
+            // Override popover settings
+            // popover: {
+            //     template:  '<div id="tour" class="popover popover-tour" role="tooltip">' +
+            // '<div class="popover-arrow"></div>' +
+            // '<div class="tour-exit"></div>' +
+            // '<h3 class="popover-header"></h3>' +
+            // '<div class="popover-body">' +
+            // '</div>' +
+            // '<div class="popover-footer">' +
+            // '   <a class="btn tour-prev">' +
+            // 'Wstecz' +
+            // '   </a>' +
+            // '   <a class="btn tour-next">' +
+            // 'Dalej' +
+            // '   </a>' +
+            // '   <a class="btn btn-primary tour-finish hidden">' +
+            // 'Koniec' +
+            // '   </a>' +
+            // '</div>' +
+            // '</div>'
             // }
         });
 
 
-        document.getElementById("btnLiveDemo").addEventListener("click", function() {
+        document.getElementById("btnLiveDemo").addEventListener("click", function () {
             tour.show();
         });
     </script>
